@@ -9,12 +9,12 @@
 
 // 입력
 // var age = prompt("나이를 입력하세요.");
-var age = 15;
+var age = 7;
 var charge = 0;
 
 // 연산 및 출력
 if(age < 8){
-    document.write("미취학 아동입니다.<br>")
+    document.write("취학전 아동입니다.<br>")
     charge = 1000;
 }
 else if(age >= 8 && age < 14){
