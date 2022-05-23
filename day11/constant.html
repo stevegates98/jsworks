@@ -23,20 +23,19 @@
 
         // 원의 둘레와 넓이를 계산하는 프로그램
         // 원의 둘레는 2πr(2*PI*반지름), 넓이는 πr^2(PI * 반지름 * 반지름)
-        const PI = 3.14;
-        var radius = 4; // 반지름
-        var circum = 0.0; // 원의 둘레
-        var circleArea = 0.0; // 원의 넓이
-
-        
+        const PI = 3.14; // 변경할 수 없는 상수
+        let radius = 4; // 반지름
+        let circum = 0.0; // 원의 둘레
+        let circleArea = 0.0; // 원의 넓이
+        // 컴파일 에러는 빨간 줄로 표시되지만 런타임 에러는 표시되지 않는다.
 
         // 연산
         circum = 2 * PI * radius;
         circleArea = PI * radius * radius;
 
         // 출력
-        console.log("원의 둘레는 " + circum + "입니다.");
-        console.log("원의 넓이는 " + circleArea + "입니다.");
+        console.log("원의 둘레는 " + circum + "입니다."); // 25.12
+        console.log("원의 넓이는 " + circleArea + "입니다."); // 50.24
     </script>
 </body>
 </html>
