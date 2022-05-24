@@ -45,6 +45,38 @@
             }
             document.write("<br>");  
         }
+        /*
+            $
+            $$
+            $$$
+            $$$$
+            $$$$$
+
+            i = 1, j = 1
+            i = 2, j = 1
+            i = 3, j = 1
+            i = 4, j = 1
+            i = 5, j = 1
+            i = 5, j = 2
+            i = 5, j = 3
+            i = 5, j = 4
+            i = 5, j = 5
+        */
+       /*
+            $$$$$
+            $$$$
+            $$$
+            $$
+            $
+       */
+       document.write("<br>");
+        // 역삼각형 모양
+        for(i = 5; i >= 1; i--){
+            for(j = 1; j <= i; j++){
+                document.write("$");
+            }
+            document.write("<br>");  
+        }   
     </script>
 </body>
 </html>
