@@ -13,10 +13,11 @@
         
         while(true){
             i++;
-            n = i + n;
-            if(n > 100){
-                document.write("n = " + i + "<br>");
-                document.write("sum = " + n);
+            i = n + i;
+            n++;
+            if(i > 100){
+                document.write("n = " + n + "<br>");
+                document.write("sum = " + i);
                 break;
             }
         }
