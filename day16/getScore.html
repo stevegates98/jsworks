@@ -9,9 +9,23 @@
         let kor = 90;
         function getScore(){
             kor = 100;
+            console.log("전역변수 : " + kor);
         }
+
         getScore();
-        console.log(kor);
+        console.log("전역변수 : " + kor);
+
+        // 지역 변수
+        let eng = 90;
+        let score = function(){
+            let eng = 100;
+            console.log("지역변수 : " + eng);
+        }
+
+        // 호출
+        score();
+        console.log("전역변수 : " + eng);
+
     </script>
 </head>
 <body>

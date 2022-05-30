@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        let number = []
+        let sum = 0;
+        for(let i = 0; i < 10; i++) {
+            i++;
+            if (i % 2 == 1) {
+                number.push(i);
+                sum += i;
+            }
+        }
+        number.push(sum);
+        // document.write(number.join(" "));
+        for(let i in number) {
+            document.write(number[i] + " ");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
