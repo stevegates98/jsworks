@@ -13,7 +13,8 @@
             price: 30000,
 
             info: function(){
-                alert(book.title + "책의 분량은 " + book.pages + "쪽입니다.");
+                // book.title을 객체 내부에서는 this를 사용한다.
+                alert(this.title + "책의 분량은 " + this.pages + "쪽입니다.");
             }
         }
 
