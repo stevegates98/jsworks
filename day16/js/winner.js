@@ -1,8 +1,6 @@
 let member = prompt("전체 응모자 수 : "); // 응모자 수
 let winner = new Array(5); // 당첨자 수 5명 배열 선언
 
-
-
 if(member == null){
     document.write("<p>입력이 취소되었습니다.</p>");
 }
