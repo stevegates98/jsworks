@@ -26,3 +26,6 @@ let str2 = "var num8 = 20";
 eval(str1); // var num7 = 10
 eval(str2); // var num8 = 20
 console.log(num7 + num8); // 30
+
+console.log(eval("2*30")); // 60
+console.log(eval("2/30")); // 0.06
