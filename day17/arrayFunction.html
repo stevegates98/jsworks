@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체의 함수</title>
+    <script>
+        // toString() - 배열을 문자열로 변환
+        let alphabet = ["a", "b", "c", "d", "e"];
+        document.write(alphabet); // ["a", "b", "c", "d", "e"]
+        console.log(alphabet); // (5) ["a", "b", "c", "d", "e"]
+        document.write("<br>");
+        document.write(alphabet.toString()); // a,b,c,d,e
+        console.log(alphabet.toString()); // a,b,c,d,e
+        document.write("<br>");
+
+        // 숫자, 문자, 객체
+        for(let item in alphabet) {
+            // console.log(alphabet[item]);
+            document.write(alphabet[item] + " ");
+        }
+
+        // sort() - 오름차순 정렬
+        let num = [15, 33, 4, 11, 54, 99]
+        num.sort();
+        console.log(num.toString()); // 4,11,15,33,54,99
+        num.reverse(); // 내림차순 정렬
+        console.log(num.toString()); // 99,54,33,15,11,4
+
+        num.sort(function(a, b) {
+            // return a - b;
+            return b - a;
+        });
+
+        console.log(num.toString()); // 4,11,15,33,54,99
+
+        // reverse() - 배열의 순서를 뒤집는다.
+        let letter = ["a", "b", "c", "d", "e"];
+        console.log((letter.reverse()).toString()); // ["e", "d", "c", "b", "a"]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

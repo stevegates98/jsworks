@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장 객체</title>
+    <script>
+        // substring(a, b) - a위치에서 b위치까지 잘라내기
+        // substring(a) - a위치부터 끝까지 잘라내기
+        let str1 = "Javascript";
+        console.log(str1.substring(4, 9)); // scrip
+        console.log(str1.substring(4)); // script
+
+        // split() - 구분기호로 문자열을 분리하여 배열로 반환
+        let str2 = "Javascript_jQuery";
+        let division = str2.split("_");
+        console.log(division[0]); // Javascript
+        console.log(division[1]); // jQuery
+
+        let animal = "dog cat horse cow";
+        let animalArr = animal.split(" ");
+        console.log(animalArr); // ["dog", "cat", "horse", "cow"]
+
+        for(let i = 0; i < animalArr.length; i++) {
+            console.log(animalArr[i]);
+        }
+        document.write("<br>");
+        // for ~ in
+        for(let item in animalArr) {
+            console.log(animalArr[item]);
+        }
+
+        // replace() - 특정 문자를 변경(대체)
+        let str3 = "Javascript";
+        console.log(str3.replace("Javascript", "jQuery")); // JQuery
+
+        // trim() - 문자열의 양 끝 공백 제거
+        let str4 = "   Javascript   ";
+        console.log(str4.trim()); // Javascript
+
+        // toLowerCase() - 대문자를 소문자로 변경, toUpperCase() - 소문자를 대문자로 변경
+        let word = "Thank You!!";
+        console.log(word.toLowerCase()); // thank you!!
+        console.log(word.toUpperCase()); // THANK YOU!!
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
