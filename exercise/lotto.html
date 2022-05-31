@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        h1{
+            width: 200px;
+            text-align: center;
+            margin: 30px auto;
+            border: 1px solid #444;
+            background: #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        p{text-align: center;}
+    </style>
+</head>
+<body>
+    <section>
+        <h1>로또 추첨 번호</h1>
+        <p id="display"></p>
+    </section>
+    <script>
+        let lotto = [];
+        for (let i = 0; i < 6; i++) {
+            lotto[i] = Math.floor(Math.random() * 45 + 1);
+            for (let j = 0; j < i; j++) {
+                if (lotto[j] == lotto[i]) {
+                    i--;
+                    break;
+                }
+            }
+        }
+        document.querySelector("#display").innerHTML = "번호 : " + lotto.join(", ");
+    </script>
+</body>
+</html>
