@@ -8,8 +8,12 @@
 // }
 
 // 실행 함수
-setInterval(function(){
+let timer = setInterval(function(){
     const date = new Date();
     let now = date.toLocaleTimeString(); // 시간(표시)
     document.getElementById("display").innerHTML = now;
 }, 1000);
+
+function myStop(){
+    clearInterval(timer);
+}
