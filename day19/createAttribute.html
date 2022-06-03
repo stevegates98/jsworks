@@ -13,8 +13,11 @@
 
             let newImg = document.createElement("img");
             let src = document.createAttribute("src");
+            let alt = document.createAttribute("alt");
             src.value = "images/coffee-gray.jpg";
+            alt.value = "커피 사진";
             newImg.setAttributeNode(src); // img태그와 소스를 연결
+            newImg.setAttributeNode(alt); // img태그와 소스를 연결
 
             document.getElementById("info").appendChild(newP);
             document.getElementById("info").appendChild(newImg);
