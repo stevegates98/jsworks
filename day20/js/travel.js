@@ -14,14 +14,14 @@ function addList(){
 
     // console.log(itemList);
 
-    showList();
+    showList(); // 목록 조회 호출
 }
 
 // 아이템 목록 조회 함수
 function showList(){
     let list = "<ul>"; // 목록 리스트 변수 할당
     for(let i = 0; i < itemList.length; i++){
-        list += "<li>" + itemList[i] + "span class='close' id=" + i + ">X</span></li>";
+        list += "<li>" + itemList[i] + "<span class='close' id=" + i + ">X</span></li>";
     }
     list += "</ul>";
     document.getElementById("itemList").innerHTML = list;
@@ -32,4 +32,13 @@ function showList(){
     for(let i = 0; i < removeList.length; i++){
         removeList[i].addEventListener('click', remove);
     }
+}
+
+// 삭제 함수
+function remove(){
+    console.log(this); // 클릭 이벤트가 일어난 대상
+    let id = this.getAttribute('id'); // 인덱스 가져오기
+    itemList.splice(id, 1); // 인덱스가 id인 요소 1개 삭제
+
+    showList(); // 목록 조회 호출
 }
