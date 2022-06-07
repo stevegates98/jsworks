@@ -12,7 +12,7 @@ function addList(){
     document.getElementById('item').value = ''; // 아이템 초기화
     document.getElementById('item').focus(); // 커서 위치
 
-    // console.log(itemList);
+    console.log(itemList);
 
     showList(); // 목록 조회 호출
 }
