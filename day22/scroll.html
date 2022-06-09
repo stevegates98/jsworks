@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 관련 메서드</title>
+    <link rel="stylesheet" href="./css/scroll.css">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            let top = $("#outer").scrollTop(); // 위에서 아래로 스크롤한 거리를 변수 top에 저장
+            let left = $("#outer").scrollLeft(); // 왼쪽에서 오른쪽으로 스크롤한 거리를 변수 left에 저장
+            $("info span").text("scrollTop: " + top + " / " + "scrollLeft: " + left); // 스크롤 거리를 출력
+            $("#outer").scroll(function(){
+                top = $("#outer").scrollTop(); // 위에서 아래로 스크롤한 거리를 변수 top에 저장
+                left = $("#outer").scrollLeft(); // 왼쪽에서 오른쪽으로 스크롤한 거리를 변수 left에 저장
+                $("#info span").text("scrollTop: " + top + " / " + "scrollLeft: " + left); // 스크롤 거리를 출력
+            });
+            $("button").click(function(){
+                $("#outer").scrollTop(250).scrollLeft(250); // 위에서 아래로 250px, 왼쪽에서 250px 스크롤
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <div class="inner"></div>
+    </div>
+    <div id="info">
+        <span></span>
+        <button>클릭</button>
+    </div>
+</body>
+</html>
