@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 강제 실행</title>
+    <link rel="stylesheet" href="./css/trigger.css">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(0)").click(function(){ // 첫번째 버튼 클릭시
+                $("#con1").toggleClass("on") // #con1의 class 속성을 on으로 변경
+            }).trigger("click"); // 첫번째 버튼 이벤트 강제 실행
+            $("button:eq(1)").click(function(){ // 두번째 버튼 클릭시
+                $("#con2").toggleClass("on") // #con2의 class 속성을 on으로 변경
+            }).trigger("click"); // 두번째 버튼 이벤트 강제 실행
+            $("button:eq(2)").click(function(){ // 세번째 버튼 클릭시
+                $("button:eq(0)").trigger("click"); // 첫번째 버튼 이벤트 강제 실행
+                $("button:eq(1)").trigger("click"); // 두번째 버튼 이벤트 강제 실행
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="con1"></div>
+    <div id="con2"></div>
+    <button>클릭1</button>
+    <button>클릭2</button>
+    <button>all</button>
+</body>
+</html>
