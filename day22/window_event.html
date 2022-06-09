@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우 관련 이벤트</title>
+    <link rel="stylesheet" href="./css/window.css">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            if($(this).width() < 960) { // 윈도우 크기가 960px 이하일 때. this = window
+                $("header").addClass("bg"); // header 요소에 bg 클래스 추가
+            } else{ // 윈도우 크기가 960px 이상일 때. this = window
+                $("header").removeClass("bg"); // header 요소에 bg 클래스 삭제
+            }
+            $(window).scroll(function(){ // 윈도우의 스크롤 이벤트
+                if($(this).scrollTop() > $("header").height()){ // 윈도우의 스크롤이 header 요소의 높이보다 클 때
+                    $("#quick").addClass("on"); // #quick 요소에 on 클래스 추가
+                } else{ // 윈도우의 스크롤이 header 요소의 높이보다 작을 때
+                    $("#quick").removeClass("on"); // #quick 요소에 on 클래스 삭제
+                }
+            }).resize(function(){ // 윈도우의 크기 변경 이벤트
+                if($(this).width() < 960) { // 윈도우 크기가 960px 이하일 때. this = window
+                    $("header").addClass("bg"); // header 요소에 bg 클래스 추가
+                } else{ // 윈도우 크기가 960px 이상일 때.
+                    $("header").removeClass("bg"); // header 요소에 bg 클래스 삭제
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+    </div>
+    <div id="quick">QUICK</div>
+</body>
+</html>

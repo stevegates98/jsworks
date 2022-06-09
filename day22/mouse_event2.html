@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <link rel="stylesheet" href="./css/event.css">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        // $(function(){
+        //     $("button").hover(function(){ // 마우스 커서 오버시
+        //         $(".pic img").toggleClass("on"); // on 클래스 추가
+        //     }, function(){ // 마우스 커서 아웃시
+        //         $(".pic img").toggleClass("on"); // on 클래스 삭제
+        //     });
+        // });
+
+        // mouseenter(), mouseleave()
+        $(function(){
+            $("button").mouseenter(function(){ // 마우스 커서 오버시
+                $(".pic img").toggleClass("on"); // on 클래스 추가
+            }).mouseleave(function(){ // 마우스 커서 아웃시
+                $(".pic img").toggleClass("on"); // on 클래스 삭제
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="pic"><img src="./images/4.jpg" alt="jQuery"></div>
+    <button>hover 이벤트</button>
+</body>
+</html>

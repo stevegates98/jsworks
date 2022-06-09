@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover(), mouseout()와 mouseenter(), mouseleave()의 차이점</title>
+    <style>
+        .bg{
+            padding: 40px;
+            margin-bottom: 40px;
+            background: #ccc;
+        }
+        .inner{
+            padding: 20px;
+            background: #999;
+        }
+    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $(".wrap1").mouseover(function(){ // .wrap1 오버시
+                $(".display").append("<strong>마우스오버</strong>"); // .display 안에 <strong>마우스오버</strong> 삽입
+            });
+            $(".wrap2").mouseenter(function(){ // mouseenter() : 마우스가 커서를 위에서 아래로 올라가는 이벤트
+                $(".display").append("<em>마우스들어감</em>"); // .display 안에 <em>마우스들어감</em> 삽입
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap1 bg">
+        <div class="inner">mouseover</div>
+    </div>
+    <div class="wrap2 bg">
+        <div class="inner">mouseenter</div>
+    </div>
+    <div class="display"></div>
+</body>
+</html>

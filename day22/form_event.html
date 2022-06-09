@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 이벤트</title>
+    <style>
+        *{margin: 5px;}
+        input[type="text"].on{background: #ff6600; color: #fff;}
+        p{color: #ff0000; display: none;}
+    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $("#m1 input").focus(function(){ // #m1 input 요소에 focus 이벤트
+                $(this).addClass("on"); // this = input에 on 클래스 추가
+            }).blur(function(){ // #m1 input 요소에 blur 이벤트 (blur : 포커스를 잃었을 때)
+                $(this).removeClass("on"); // this = input에 on 클래스 삭제
+            });
+            $("#m2").focusin(function(){ // #m2 요소에 focusin 이벤트 (focusin : 포커스가 요소에 있을 때)
+                $(this).children().addClass("on"); // this = #m2 요소의 자식요소에 on 클래스 추가
+            }).focusout(function(){ // #m2 요소에 focusout 이벤트 (focusout : 포커스가 요소에서 벗어났을 때)
+                $(this).children().removeClass("on"); // this = #m2 요소의 자식요소에 on 클래스 삭제
+            });
+            $("#m3 input").change(function(){ // #m3 input 요소에 change 이벤트. change() : 요소의 값이 변경될 때
+                let c = confirm("값을 바꾸시겠습니까?"); // confirm() : 사용자가 입력한 값을 확인하는 메시지 창
+                if(!c){ // c = false
+                    $(this).val(10); // this = #m3 input 요소의 값을 10으로 변경
+                }
+            });
+            $("#m4 input").select(function(){ // #m4 input 요소에 select 이벤트. select() : 요소의 값이 선택될 때
+                let v = $(this).val(); // this = #m4 input 요소의 값
+                let size = v.length; // size = v의 길이
+                alert(v + " 총 " + size + "문자를 선택하셨습니다."); // alert() : 사용자에게 메시지를 보여주는 함수
+            });
+            $(".frm").submit(function(){ // .frm 요소에 submit 이벤트. submit() : 요소의 값을 전송할 때
+                if(!$("#id").val()){ // #id 요소의 값이 없을 때
+                    $(".msg1").css("display", "block"); // .msg1 요소의 display 속성을 block으로 변경
+                    $("#id").focus(); // #id 요소에 포커스 주기
+                    return false; // false 반환
+                } else{ // #id 요소의 값이 있을 때
+                    $(".msg1").css("display", "none"); // .msg1 요소의 display 속성을 none으로 변경
+                }
+                if(!$("#pw").val()){ // #pw 요소의 값이 없을 때
+                    $(".msg2").css("display", "block"); // .msg2 요소의 display 속성을 block으로 변경
+                    $("#pw").focus(); // #pw 요소에 포커스 주기
+                    return false; // false 반환
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <input type="text" placeholder="값을 입력하세요.">
+    </div>
+    <div id="m2">
+        <input type="text" placeholder="값을 입력하세요.">
+    </div>
+    <div id="m3">
+        <span>값을 수정한 후 다음 입력요소로 이동하세요.</span>
+        <input type="text" value="10">
+    </div>
+    <div id="m4">
+        <input type="text" value="텍스트를 드래그 하세요.">
+    </div>
+    <form action="#" class="frm">
+        <fieldset>
+            <legend>로그인</legend>
+            <div>
+                <label for="id">아이디</label><input type="text" id="id">
+            </div>
+            <p class="msg1">아이디를 입력하세요!</p>
+            <div>
+                <label for="pw">비밀번호</label><input type="password" id="pw">
+            </div>
+            <p class="msg2">비밀번호를 입력하세요!</p>
+            <button>전송</button>
+        </fieldset>
+    </form>
+</body>
+</html>

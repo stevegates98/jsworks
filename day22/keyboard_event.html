@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트</title>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./css/keyboard.css">
+    <script>
+        $(function(){ // 초기화
+            $("textarea").keydown(function(){ // 키보드 버튼을 누르면
+                $(this).addClass("on"); // 텍스트 영역을 활성화한다. this = textarea
+            }).keyup(function(){ // 키보드 버튼을 떼면
+                $("#display").text($("textarea").val()); // 텍스트 영역의 값을 출력한다. this = textarea
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <textarea></textarea>
+    <div id="display"></div>
+</body>
+</html>
