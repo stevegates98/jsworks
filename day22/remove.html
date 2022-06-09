@@ -27,44 +27,7 @@
         <span>내용1</span>
     </div>
     <div id="m3">
-        <span>내용2</span><!DOCTYPE html>
-        <html lang="ko">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>삭제관련 메서드</title>
-            <script src="./js/jquery-3.6.0.js"></script>
-            <script>
-                $(function(){
-                    let detachDiv; // detachDiv 변수 선언
-                    $("button:eq(0)").click(function(){ // 첫번째 버튼 클릭시
-                        $("#m1 a").removeAttr("href"); // #m1 a 속성 href 삭제
-                        $("#m2").empty(); // #m2 내용 삭제
-                        $("#m3").remove(); // #m3 삭제
-                        detachDiv = $("#m4").detach(); // #m4 내용 저장
-                    });
-                    $("button:eq(1)").click(function(){ // 두번째 버튼 클릭시
-                        detachDiv.insertAfter("#m2"); // #m2 이후에 삽입
-                    });
-                });
-            </script>
-        </head>
-        <body>
-            <div id="m1"><a href="#">링크</a></div>
-            <div id="m2">
-                <span>내용1</span>
-            </div>
-            <div id="m3">
-                <span>내용2</span>
-            </div>
-            <div id="m4">
-                <span>내용3</span>
-            </div>
-            <button>삭제</button>
-            <button>detach</button>
-        </body>
-        </html>
+        <span>내용2</span>
     </div>
     <div id="m4">
         <span>내용3</span>
