@@ -17,39 +17,39 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin:0; padding:0;
 }
- h1, h2, h3, h4, h5, h6 {font-weight:normal; font-size:inherit;}
+ h1, h2, h3, h4, h5, h6 {font-weight:normal; font-size:inherit;} /* h1-h6의 font-weight를 normal로 설정하고 font-size를 inherit로 설정하여 부모의 font-size를 사용하도록 함 */
 
  /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, 
-menu, nav, section {display:block;}
-body {line-height:1;}
-blockquote, q {quotes:none;}
-blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+menu, nav, section {display:block;} /* article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section의 display를 block로 설정함 */
+body {line-height:1;} /* body의 line-height를 1로 설정함 */
+blockquote, q {quotes:none;} /* blockquote, q의 quotes를 none로 설정함. quotes는 대괄호에 있는 문자열을 어떻게 나눌지를 설정하는 것이다. */
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;} /* blockquote, q의 content를 none으로 설정함. content는 대괄호에 있는 문자열을 어떻게 나눌지를 설정하는 것이다. */
 
 /* align, border, input */
-img, fieldset, a {border:none;}
-img {vertical-align:middle;}
-table, thead, tbody, tfoot {border-collapse:collapse; border-spacing:0; border:0 none;}
-ul, ol, li {list-style:none;}
-address, em {font-style:normal;}
-input, select, textarea, button, form img, label {vertical-align:middle;}
+img, fieldset, a {border:none;} /* img, fieldset, a의 border를 none로 설정함 */
+img {vertical-align:middle;} /* img의 vertical-align을 middle로 설정함 */
+table, thead, tbody, tfoot {border-collapse:collapse; border-spacing:0; border:0 none;} /* table, thead, tbody, tfoot의 border-collapses를 collapse로 설정함. border-spacing은 table의 셀의 간격을 설정하는 것이다. border는 table의 셀의 테두리를 설정하는 것이다. border:0 none은 table의 셀의 테두리를 없애는 것이다. */
+ul, ol, li {list-style:none;} /* ul, ol, li의 list-style을 none으로 설정함 */
+address, em {font-style:normal;} /* address, em의 font-style을 normal로 설정함 */
+input, select, textarea, button, form img, label {vertical-align:middle;} /* input, select, textarea, button, form img, label의 vertical-align을 middle로 설정함 */
 
 /* 건너뛰기 링크(접근성) */
-.skipnavi {position:absolute; left:0; top:-50px; text-indent:-9999px; font-size:0; width:100%; z-index:999; }
+.skipnavi {position:absolute; left:0; top:-50px; text-indent:-9999px; font-size:0; width:100%; z-index:999; } /* .skipnavi의 position을 absolute로 설정하고 left를 0으로 설정하고 text-indent을 -9999px로 설정하고 font-size를 0으로 설정하고 width를 100%로 설정하고 z-index를 999로 설정함 */
 .skipnavi li a:focus, 
-.skipnavi li a:active {position:absolute; left:0; top:50px; display:block; width:100%; padding:5px 0; text-align:center; text-indent:0px; font-size:12px; font-weight:bold; background:#f2f2f2;}
+.skipnavi li a:active {position:absolute; left:0; top:50px; display:block; width:100%; padding:5px 0; text-align:center; text-indent:0px; font-size:12px; font-weight:bold; background:#f2f2f2;} /* .skipnavi li a:focus, .skipnavi li a:active의 position을 absolute로 설정하고 left를 0으로 설정하고 top을 50px로 설정하고 display를 block로 설정하고 width를 100%로 설정하고 padding을 5px 0으로 설정하고 text-align을 center로 설정하고 text-indent을 0px로 설정하고 font-size를 12px로 설정하고 font-weight를 bold로 설정하고 background를 #f2f2f2로 설정함 */
 
 /* anchor */
-a {text-decoration:none;}
-a:link {color:#444;}
-a:visited {color:#444;}
-a:hover {color:#444;}
-a:focus {color:#444;}
+a {text-decoration:none;} /* a의 text-decoration을 none으로 설정함 */
+a:link {color:#444;} /* a:link의 color를 #444로 설정함. a:link는 링크를 클릭했을 때의 색상을 설정하는 것이다. */
+a:visited {color:#444;} /* a:visited의 color를 #444로 설정함. a:visited는 링크를 방문했을 때의 색상을 설정하는 것이다. */
+a:hover {color:#444;} /* a:hover의 color를 #444로 설정함. a:hover는 링크에 마우스를 올렸을 때의 색상을 설정하는 것이다. */
+a:focus {color:#444;} /* a:focus의 color를 #444로 설정함. a:focus는 링크에 포커스를 가져왔을 때의 색상을 설정하는 것이다. */
 
 /* checkbox & radio button Design */
 input[type=checkbox].css-checkbox {
 	overflow: hidden; position:absolute; left:-1000px; width:1px; height:1px;
-}
+} /* input[type=checkbox].css-checkbox의 overflow는 hidden을 설정하고 position은 absolute로 설정하고 left는 -1000px로 설정하고 width는 1px로 설정하고 height는 1px로 설정함 */
 input[type=checkbox].css-checkbox + label {
 	display:inline-block; height:20px; padding-left:30px !important; line-height:20px !important; background:url(../img/bg_checkbox.png) no-repeat 0 0; background-size:20px; cursor:pointer; vertical-align:middle; font-size:15px;
 	-webkit-touch-callout: none;
@@ -57,14 +57,14 @@ input[type=checkbox].css-checkbox + label {
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-}
+} /* input[type=checkbox].css-checkbox + label의 display는 inline-block을 설정하고 height는 20px로 설정하고 padding-left는 30px !important로 설정하고 line-height는 20px !important로 설정하고 background는 url(../img/bg_checkbox.png) no-repeat 0 0로 설정하고 background-size는 20px로 설정하고 cursor는 pointer로 설정하고 vertical-align을 middle로 설정하고 font-size를 15px로 설정함 */
 input[type=checkbox].css-checkbox:checked + label {
 	background-position:0 -20px;
-}
+} /* input[type=checkbox].css-checkbox:checked + label의 background-position을 0 -20px로 설정함 */
 /* radio button design */
 input[type=radio].css-radio {
 	overflow:hidden; position:absolute; left:-1000px; width:1px; height:1px;
-}
+} /* input[type=radio].css-radio의 overflow는 hidden을 설정하고 position은 absolute로 설정하고 left는 -1000px로 설정하고 width는 1px로 설정하고 height는 1px로 설정함 */
 input[type=radio].css-radio + label {
 	display:inline-block; padding-left:20px !important; margin-right:20px; background:url(../img/bg_radio.png) no-repeat 0 0; cursor:pointer; vertical-align:middle; font-size:15px;
 	/*-webkit-touch-callout:none;
@@ -72,25 +72,34 @@ input[type=radio].css-radio + label {
 	-khtml-user-select:none;
 	-moz-user-select:none;
 	-ms-user-select:none;*/
-}
+} /* input[type=radio].css-radio + label의 display는 inline-block을 설정하고 padding-left는 20px !important로 설정하고 margin-right는 20px로 설정하고 background는 url(../img/bg_radio.png) no-repeat 0 0로 설정하고 cursor는 pointer로 설정하고 vertical-align을 middle로 설정하고 font-size를 15px로 설정함 */
 input[type=radio].css-radio:checked + label {
 	background-position:0 -50px;
-}
-input::-ms-input-placeholder {color:#999;}
-input::-webkit-input-placeholder {color:#999;}
-input::-moz-placeholder {color:#999;}
-textarea::-ms-input-placeholder {color:#999;}
-textarea::-webkit-input-placeholder {color:#999;}
-textarea::-moz-placeholder {color:#999;}
+} /* input[type=radio].css-radio:checked + label의 background-position을 0 -50px로 설정함 */
+input::-ms-input-placeholder {color:#999;} /* IE10에서 input::-ms-input-placeholder의 color를 #999로 설정함. -ms-input-placeholder는 IE10에서 input에 placeholder를 설정하는 것이다. */
+input::-webkit-input-placeholder {color:#999;} /* Chrome, Safari, Opera는 input::-webkit-input-placeholder의 color를 #999로 설정함. -webkit-input-placeholder는 Chrome, Safari, Opera에서 input에 placeholder를 설정하는 것이다. */
+input::-moz-placeholder {color:#999;} /* Firefox는 input::-moz-placeholder의 color를 #999로 설정함. -moz-placeholder는 Firefox에서 input에 placeholder를 설정하는 것이다. */
+textarea::-ms-input-placeholder {color:#999;} /* IE10에서 textarea::-ms-input-placeholder의 color를 #999로 설정함. -ms-input-placeholder는 IE10에서 textarea에 placeholder를 설정하는 것이다. */
+textarea::-webkit-input-placeholder {color:#999;} /* Chrome, Safari, Opera는 textarea::-webkit-input-placeholder의 color를 #999로 설정함. -webkit-input-placeholder는 Chrome, Safari, Opera에서 textarea에 placeholder를 설정하는 것이다. */
+textarea::-moz-placeholder {color:#999;} /* Firefox는 textarea::-moz-placeholder의 color를 #999로 설정함. -moz-placeholder는 Firefox에서 textarea에 placeholder를 설정하는 것이다. */
 
 /* input_style */
+/* input[type=text]의 -webkit-appearance는 none을 설정하고 box-sizing은 border-box을 설정하고 display는 inline-block을 설정하고 height는 45px로 설정하고 padding은 0 10px로 설정하고 border는 1px solid #ccc로 설정하고 background-color는 #fff로 설정하고 line-height는 normal을 설정하고 font-size는 15px로 설정함 */
+/* -webkit-appearance: none;은 사용자가 입력하는 것을 지원하지 않는다. */
 input[type=text] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;}
-input[type=number] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;}
+/* input[type=number]의 -webkit-appearance는 none을 설정하고 box-sizing은 border-box을 설정하고 display는 inline-block을 설정하고 height는 45px로 설정하고 padding은 0 10px로 설정하고 border는 1px solid #ccc로 설정하고 background-color는 #fff로 설정하고 line-height는 normal을 설정하고 font-size는 15px로 설정함 */
+input[type=number] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;} 
+/* input[type=password]의 -webkit-appearance는 none을 설정하고 box-sizing은 border-box을 설정하고 display는 inline-block을 설정하고 height는 45px로 설정하고 padding은 0 10px로 설정하고 border는 1px solid #ccc로 설정하고 background-color는 #fff로 설정하고 line-height는 normal을 설정하고 font-size는 15px로 설정함 */
 input[type=password] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;}
-input[type=tel] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;}
-input[type=email] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;}
-input[type=birthday] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;}
-textarea {-webkit-appearance:none; box-sizing:border-box; padding:10px; border:1px solid #ccc; font-size:15px;}
+/* input[type=tel]의 -webkit-appearance는 none을 설정하고 box-sizing은 border-box을 설정하고 display는 inline-block을 설정하고 height는 45px로 설정하고 padding은 0 10px로 설정하고 border는 1px solid #ccc로 설정하고 background-color는 #fff로 설정하고 line-height는 normal을 설정하고 font-size는 15px로 설정함 */ 
+input[type=tel] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;} 
+/* input[type=email]의 -webkit-appearance는 none을 설정하고 box-sizing은 border-box을 설정하고 display는 inline-block을 설정하고 height는 45px로 설정하고 padding은 0 10px로 설정하고 border는 1px solid #ccc로 설정하고 background-color는 #fff로 설정하고 line-height는 normal을 설정하고 font-size는 15px로 설정함 */
+input[type=email] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;} 
+/* input[type=date]의 -webkit-appearance는 none을 설정하고 box-sizing은 border-box을 설정하고 display는 inline-block을 설정하고 height는 45px로 설정하고 padding은 0 10px로 설정하고 border는 1px solid #ccc로 설정하고 background-color는 #fff로 설정하고 line-height는 normal을 설정하고 font-size는 15px로 설정함 */
+input[type=birthday] {-webkit-appearance:none; box-sizing:border-box; display:inline-block; height:45px; padding:0 10px; border:1px solid #ccc; background-color:#fff;  line-height:normal; font-size:15px;} 
+/* textarea의 -webkit-appearance는 none을 설정하고 box-sizing은 border-box을 설정하고 padding은 10px로 설정하고 border는 1px solid #ccc로 설정하고 font-size는 15px로 설정함 */
+textarea {-webkit-appearance:none; box-sizing:border-box; padding:10px; border:1px solid #ccc; font-size:15px;} 
+/* select의 -webkit-appearance는 none을 설정하고 box-sizing은 border-box을 설정하고 padding은 10px로 설정하고 border는 1px solid #ccc로 설정하고 font-size는 15px로 설정함 */
 select {-webkit-appearance:none; height:30px; padding:0 5px; box-sizing:border-box; border:1px solid #ccc;}
 
 /* select_common */
@@ -99,12 +108,16 @@ select {-webkit-appearance:none; height:30px; padding:0 5px; box-sizing:border-b
 
 /* common */
 html{height:100%;}
+/* white-space : 라인을 공백으로 잘라서 줄을 바꿔서 출력하는 기능, word-wrap:break-word는 줄을 바꿔서 출력하는 기능 */
 body {height:100%; font-family:'Malgun Gothic','맑은 고딕',sans-serif; font-size:16px; letter-spacing:-1px; color:#444; white-space:normal; word-wrap:break-word;}
 input, select, textarea {box-sizing:border-box; font-size:15px; font-family:'Malgun Gothic','맑은 고딕',sans-serif; letter-spacing:-1px; color:#444; -webkit-appearance:none;}
 textarea {box-sizing:border-box; padding:10px; border:1px solid #ccc;}
 input, textarea {-webkit-appearance:none; border-radius:0;}
 * {-webkit-text-size-adjust:none;}
 .dp_none {display:none;}
+/* overflow:hidden; 이미지가 스크롤바에 가려지지 않도록 하는 기능 */
+/* visibility:hidden; 이미지가 안보이게 */
+/* text-indent : 문자열의 시작점을 이동하는 기능 */
 .hdd, legend {font-size:0; width:0; height:0; line-height:0; text-indent:-9999px; overflow:hidden; visibility:hidden; position:absolute; top:0; left:0;}
 caption {font-size:0; width:0; height:0; line-height:0; text-indent:-9999px; overflow:hidden;}
 .clear:after {content:""; display:block; clear:both;}
