@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax 예제</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        caption{margin-bottom: 10px;}
+    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $.ajax({ // ajax - 비동기 통신방식
+                type: "GET", // type : 전송방식
+                url: "score.json", // url : 통신할 url
+                dataType: "json", // dataType : 전송방식
+                
+                success: function(data){ // data - score.json 파일의 내용
+                    console.log(data);
+                    let el = ""; // html 코드를 저장할 변수
+                    // xml(Extensible Markup Language)의 경우에는 태그를 사용하지 않아도 자동으로 태그가 생성된다.
+                    // json(JavaScript Object Notation)의 경우에는 태그를 사용해야 한다.
+                    $.each(data, function(index, obj){ // .each : 순회하며 처리하는 함수. 인덱스, 객체
+                        el += "<tr>";
+                        el += "<th scope='row'>" + obj.name + "</th>";
+                        el += "<td>" + obj.score1 + "</td>";
+                        el += "<td>" + obj.score2 + "</td>";
+                        el += "<td>" + obj.score3 + "</td>";
+                        el += "</tr>";
+                    });
+                    $("table tbody").append(el); // table tbody에 el을 추가
+                },
+                error: function(xhr){ // xhr(xmlhttprequest). error : 에러가 발생했을 때 처리하는 함수.
+                    console.log(xhr.status + "/" + xhr.errorText); // 에러코드와 에러메시지를 출력
+                    /*
+                        에러코드
+                        200 : 정상처리
+                        404 : 파일을 찾을 수 없음
+                        500 : 서버에러
+                    */
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <caption>학생별 시험 점수</caption>
+        <thead>
+            <tr>
+                <th scope="col">이름</th>
+                <th scope="col">html</th>
+                <th scope="col">css</th>
+                <th scope="col">javascript</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

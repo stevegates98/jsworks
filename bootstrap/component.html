@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 주요 요소</title>
+    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        *{margin: 10px;}
+    </style>
+</head>
+<body>
+    <h2>버튼(Button)</h2>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-danger">Danger</button>
+
+    <h2>배지(Badge)</h2>
+    <h3>Example heading<span class="badge badge-dark">New</span></h3>
+    <h3>Example heading<span class="badge badge-light">New</span></h3>
+    <h3>Example heading<span class="badge bg-primary">New</span></h3>
+    <h3>Example heading<span class="badge bg-secondary">New</span></h3>
+
+    <h2>카드(Card)</h2>
+    <div class="card">
+        <div class="card-body">
+            카드 본문 내의 일부 텍스트입니다.
+        </div>
+    </div>
+
+    <!-- my : margin top, bottom을 의미 1rem = 16px -->
+    <div class="card my-3" style="width: 20rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">카드 제목을 기반으로 하고 카드 컨텐츠의 대부분을 구성합니다.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="https://www.naver.com" target="_blank" class="btn btn-primary">Naver</a>
+        </div>
+    </div>
+</body>
+</html>
